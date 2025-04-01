@@ -61,21 +61,6 @@
     transition: transform 0.2s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .h1 {
     font-size: 80px; /* Adjustable font size as needed */
 }
@@ -86,9 +71,31 @@
 }
 
 #carrosel {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.5s ease-in-out; /* Adiciona a transição */
 }
+
+#carrosel .habilidade {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: rgb(189, 48, 48);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#carrosel .habilidade:hover {
+  transform: scale(1.1);
+}
+
 
 .sombra,
 .hidden {
@@ -267,9 +274,9 @@ footer {
     .container {
         width: 80%; /* Adjusted width for mobile */
     }
+
 }
 
-  
 
 	  /* Adicione estilos conforme necessário */
 	  
@@ -290,7 +297,7 @@ footer {
 					<li><a href="#habilidades">Habilidades</a></li>
 					<li><a href="#experiencia">Experiência</a></li>
 					<li><a href="#projetos">Projetos</a></li>
-					<li><a href="dashboard.html">Power Bi</a></li>
+					<li><a href="Dash.html">Power Bi</a></li>
 					<li><a href="sites.html">Sites</a></li>
 					<li><a href="Blog.html">Noticias</a></li>
 					
@@ -308,7 +315,7 @@ footer {
 			<div id="mascara-texto-apresentacao">
 			  <div id="texto-apresentacao">
 				<p>"Olá! Sou Gustavo Farias, um Data Analytics apaixonado por transformar dados em insights estratégicos. Com expertise em Python, SQL e automação de processos (RPA). Vamos juntos potencializar seus dados! 💡🚀"</p>
-				<a class="curriculo" href="Currículo l Gustavo Henrique Farias 2025.pdf" target="_blank">Baixar Currículo</a>
+				<a class="curriculo" href="Currículo_Gustavo Henrique Farias_2025.2.pdf" target="_blank">Baixar Currículo</a>
 			  </div>
 			</div>
 		  </section>
@@ -341,7 +348,6 @@ footer {
 					  })
 			
 			}
-			
 			
 			
 			const titulo = document.querySelectorAll('p')
@@ -399,12 +405,7 @@ footer {
 			  }, 1000 / 60);
 			}
 
-
-
-			
 		  </script>
-
-
 
 		  <body>
 			
@@ -484,8 +485,6 @@ footer {
 					<div class="sombra"></div>
 				  </div>
 
-				  
-			
 				  <!-- Adicione mais habilidades conforme necessário -->
 			
 				</div>
@@ -523,8 +522,6 @@ footer {
 		<section id="experiencia">
 			<h1>Experiência</h1>
 			
-
-
 			<div class="container right">
 				<div class="content">
 					<h2 class="titulo_cargo">Analista de dados / Suporte</h2>
@@ -544,13 +541,7 @@ footer {
 						Power BI, SQL, RPA, EXCEL.
 					</p>
 				</div>
-			</div>
-		
-
-
-						
-
-						 
+			</div>		 
 					</p>
 				</div>
 			</div>
@@ -584,7 +575,6 @@ footer {
     - HTML;<br>
     - CSS.
 </p>
-
 
     <strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
 </p>
@@ -628,8 +618,6 @@ footer {
     <strong>Outras Habilidades:</strong> AWS, Git, Docker, Oracle.
 </p>
 
-
-
 				</div>
 			</div>
 			<div class="container left" >
@@ -671,10 +659,6 @@ footer {
 
     <strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
 </p>
-
-
-
-
 
 </div>
 </div>
@@ -719,10 +703,6 @@ processos ETL para extração, transformação e carga de dados de diferentes fo
 
 <strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
 </p>
-
-
-
-
 					</div>
 			</div>
 			<div class="container left" >
@@ -769,195 +749,155 @@ Na VilaUrbe, trabalho diretamente com bancos de dados, estruturação e modelage
     - Feedbacks de melhorias.<br><br>
 
     <strong>Ferramentas utilizadas:</strong> Python, Pandas, Streamlit, NumPy, Matplotlib e Sklearn, RPA, SQL, EXCEL,Apache AirFlow, AWS e Linux </p>
-
-
-
-
 				</div>
 			</div>
-			
-
 		</section>
-		
-		
-		
-
-
-
 		<section id="projetos">
 			<h1>Projetos</h1>
-		  
 			<div id="all-projects">
-		  
-			  <div id="projeto1" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="#" onclick="openPdf('Jornada Python.pdf')">
-				  <div class="card-project">
-					<h2>Escritor</h2>
-					<p>
-					  Escrevi livro sobre essa jornada extraordinária com Python. Mas este livro não é apenas sobre Python; é também sobre a comunidade incrível que a cerca. Através de grupos de estudo, fóruns e eventos.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  <div id="projeto2" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="#" onclick="openPdf('previsaoacoes.pdf')">
-				  <div class="card-project">
-					<h2>Previsão Mercado de Ações</h2>
-					<p>
-					  Estou participando de um projeto empolgante: prever a evolução do mercado financeiro para maximizar ganhos e minimizar perdas. Utilizando análise de dados e habilidades em Python.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  
-		  
-			  <div id="projeto4" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="https://youtu.be/OnRYZ0P79ww" target="_blank">
-				  <div class="card-project">
-					<h2>Automação de Processos RPA</h2>
-					<p>
-					  Automação de processos é uma revolucionária abordagem que nos permite automatizar atividades repetitivas e demoradas, desenvolvimento de scripts complexos.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  
+				<div id="projeto1" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+					<a href="#" onclick="openPdf('Jornada Python.pdf')">
+						<div class="card-project">
+							<h2>Escritor</h2>
+							<p>Escrevi um livro sobre essa jornada extraordinária com Python. Mas este livro não é apenas sobre Python;
+								é também sobre a comunidade incrível que a cerca. Através de grupos de estudo, fóruns e eventos.</p>
+						</div>
+					</a>
+					<div class="card-project-shadow"></div>
+				</div>
+		
+				<div id="projeto2" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+					<a href="#" onclick="openPdf('previsaoacoes.pdf')">
+						<div class="card-project">
+							<h2>Previsão Mercado de Ações</h2>
+							<p>Estou participando de um projeto empolgante: prever a evolução do mercado financeiro para maximizar ganhos e minimizar perdas. Utilizando análise de dados e habilidades em Python.</p>
+						</div>
+					</a>
+					<div class="card-project-shadow"></div>
+				</div>
+		
+				<div id="projeto3" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+					<a href="https://youtu.be/EimGLo-W0wY" target="_blank">
+						<div class="card-project">
+							<h2>Desenvolvimento de Sites Fullstack</h2>
+							<p>Criar a experiência do usuário por meio de uma interface atraente e amigável, além de implementar a lógica de negócios e funcionalidades que tornam o site realmente poderoso.</p>
+						</div>
+					</a>
+					<div class="card-project-shadow"></div>
+				</div>
+		
+				<div id="projeto4" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+					<a href="https://youtu.be/OnRYZ0P79ww" target="_blank">
+						<div class="card-project">
+							<h2>Automação de Processos RPA</h2>
+							<p>Automação de processos é uma revolucionária abordagem que nos permite automatizar atividades repetitivas e demoradas, desenvolvimento de scripts complexos.</p>
+						</div>
+					</a>
+					<div class="card-project-shadow"></div>
+				</div>
 			</div>
-		  </section>
-		  
-		  <script><section id="projetos">
-			<h1>Projetos</h1>
-		  
-			<div id="all-projects">
-		  
-			  <div id="projeto1" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="#" onclick="openPdf('Jornada Python.pdf')">
-				  <div class="card-project">
-					<h2>Escritor</h2>
-					<p>
-					  Escrevi livro sobre essa jornada extraordinária com Python. Mas este livro não é apenas sobre Python; é também sobre a comunidade incrível que a cerca. Através de grupos de estudo, fóruns e eventos.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  <div id="projeto2" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="#" onclick="openPdf('previsaoacoes.pdf')">
-				  <div class="card-project">
-					<h2>Previsão Mercado de Ações</h2>
-					<p>
-					  Estou participando de um projeto empolgante: prever a evolução do mercado financeiro para maximizar ganhos e minimizar perdas. Utilizando análise de dados e habilidades em Python.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  <div id="projeto3" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="https://youtu.be/EimGLo-W0wY" target="_blank">
-				  <div class="card-project">
-					<h2>Desenvolvimento de Sites Fullstack</h2>
-					<p>
-					  Criar a experiência do usuário por meio de uma interface atraente e amigável, além de implementar a lógica de negócios e funcionalidades que tornam o site realmente poderoso.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  <div id="projeto4" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<a href="https://youtu.be/OnRYZ0P79ww" target="_blank">
-				  <div class="card-project">
-					<h2>Automação de Processos RPA</h2>
-					<p>
-					  Automação de processos é uma revolucionária abordagem que nos permite automatizar atividades repetitivas e demoradas, desenvolvimento de scripts complexos.
-					</p>
-				  </div>
-				</a>
-				<div class="card-project-shadow"></div>
-			  </div>
-		  
-			  
-		  
-			  
-			</div>
-
-			
-
-			
-		  </section>
-
+		</section>
+		
+		<script>
+			function gira_sombra(elemento) {
+				let sombra = elemento.querySelector('.card-project-shadow');
+				sombra.style.transition = 'transform 0.3s ease';
+				sombra.style.transform = 'rotate(10deg)';
+			}
+		
+			function desgira_sombra(elemento) {
+				let sombra = elemento.querySelector('.card-project-shadow');
+				sombra.style.transition = 'transform 0.3s ease';
+				sombra.style.transform = 'rotate(0deg)';
+			}
+		
 			function openPdf(pdfFileName) {
 				window.open(pdfFileName, '_blank');
-			  }
-			  
-		  </script>
-
-		  <button class="button" id="rodapeButton" onclick="scrollToTop()">
-			Voltar ao Topo
-		</button>
-
-		 
-
-		</section>
-
+			}
 		
+			function scrollToTop() {
+				smoothScrollTo(0, 0, 1000);
+			}
+		
+			function smoothScrollTo(endX, endY, duration) {
+				const startX = window.scrollX || window.pageXOffset;
+				const startY = window.scrollY || window.pageYOffset;
+				const distanceX = endX - startX;
+				const distanceY = endY - startY;
+				const startTime = new Date().getTime();
+		
+				duration = duration || 400;
+		
+				const easeInOutQuart = (time, from, distance, duration) => {
+					if ((time /= duration / 2) < 1) return (distance / 2) * time * time * time * time + from;
+					return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+				};
+		
+				const timer = setInterval(() => {
+					const time = new Date().getTime() - startTime;
+					const newX = easeInOutQuart(time, startX, distanceX, duration);
+					const newY = easeInOutQuart(time, startY, distanceY, duration);
+					if (time >= duration) clearInterval(timer);
+					window.scroll(newX, newY);
+				}, 1000 / 60);
+			}
+		
+			document.getElementById('other-projects-btn-powerbi').addEventListener('click', function() {
+				var otherProjectsSection = document.getElementById('other-projects-powerbi');
+				if (otherProjectsSection) {
+					otherProjectsSection.style.display = (otherProjectsSection.style.display === 'none' || otherProjectsSection.style.display === '') ? 'block' : 'none';
+				}
+			});
+		</script>
+		
+		<button class="button" id="rodapeButton" onclick="scrollToTop()">Voltar ao Topo</button>
+		
+		<!-- Scripts externos -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/habilidades.js"></script>
+		<script src="js/timeline.js"></script>
+		<script src="js/projetos.js"></script>
+
+		<script>
+			// Custom scripts
+			function openDashboard() {
+				window.location.href = 'dashboard.html';
+			}
 	
-	<!-- Scripts at the end of the body for better performance -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/habilidades.js"></script>
-    <script src="js/timeline.js"></script>
-    <script src="js/projetos.js"></script>
-
-    <script>
-        // Custom scripts
-        function openDashboard() {
-            window.location.href = 'dashboard.html';
-        }
-
-        function scrollToTop() {
-            smoothScrollTo(0, 0, 1000);
-        }
-
-        // Smooth scroll function
-        function smoothScrollTo(endX, endY, duration) {
-            const startX = window.scrollX || window.pageXOffset;
-            const startY = window.scrollY || window.pageYOffset;
-            const distanceX = endX - startX;
-            const distanceY = endY - startY;
-            const startTime = new Date().getTime();
-
-            duration = typeof duration !== "undefined" ? duration : 400;
-
-            const easeInOutQuart = (time, from, distance, duration) => {
-                if ((time /= duration / 2) < 1)
-                    return (distance / 2) * time * time * time * time + from;
-                return (
-                    (-distance / 2) * ((time -= 2) * time * time * time - 2) + from
-                );
-            };
-
-            const timer = setInterval(() => {
-                const time = new Date().getTime() - startTime;
-                const newX = easeInOutQuart(time, startX, distanceX, duration);
-                const newY = easeInOutQuart(time, startY, distanceY, duration);
-                if (time >= duration) {
-                    clearInterval(timer);
-                }
-                window.scroll(newX, newY);
-            }, 1000 / 60); // 60 fps
-        }
-    </script>
-
-    
-</body>
-
-</html>
+			function scrollToTop() {
+				smoothScrollTo(0, 0, 1000);
+			}
+	
+			// Smooth scroll function
+			function smoothScrollTo(endX, endY, duration = 400) {
+				const startX = window.scrollX || window.pageXOffset;
+				const startY = window.scrollY || window.pageYOffset;
+				const distanceX = endX - startX;
+				const distanceY = endY - startY;
+				const startTime = performance.now();
+	
+				function animationStep(currentTime) {
+					const timeElapsed = currentTime - startTime;
+					const progress = Math.min(timeElapsed / duration, 1);
+					const easeInOutQuart = progress < 0.5 
+						? 8 * progress * progress * progress * progress 
+						: 1 - Math.pow(-2 * progress + 2, 4) / 2;
+					
+					window.scrollTo(
+						startX + distanceX * easeInOutQuart,
+						startY + distanceY * easeInOutQuart
+					);
+	
+					if (timeElapsed < duration) {
+						requestAnimationFrame(animationStep);
+					}
+				}
+				requestAnimationFrame(animationStep);
+			}
+		
+	</script>
+		
+	</body>
+	
+	</html>

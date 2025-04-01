@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards Interativos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .main-dashboard {
+            width: 100%;
+            height: 700px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+            border: none;
+        }
+        .dashboards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .dashboard-item {
+            text-align: center;
+            width: 220px;
+        }
+        .dashboards iframe {
+            width: 220px;
+            height: 140px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: none;
+        }
+        .dashboards iframe:hover {
+            transform: scale(1.1);
+        }
+        .open-button {
+            margin-top: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .open-button:hover {
+            background-color: #e68900;
+        }
+        .dashboard-description {
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        
+        .button:hover {
+            background-color: #e68900;
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboards Interativos</h1>
+        <iframe id="mainDashboard" class="main-dashboard" title="Dashboard Principal" src="https://app.powerbi.com/view?r=eyJrIjoiMDVhZGVlNGQtMjBmZS00MWQxLTlkZmItYzA2NWI4MDIwMGQxIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+        <p class="dashboard-description">📊 <strong>Dashboard Indicadores de Qualidade :</strong> 
+            <p>Monitora métricas essenciais para avaliação da qualidade operacional e financeira, garantindo a conformidade com padrões de excelência e eficiência nos processos.</p>
+        <div class="dashboards">
+            <div class="dashboard-item">
+                <iframe title="Dashboard 1" src="https://app.powerbi.com/view?r=eyJrIjoiZmVmZWY0ZWMtNjZkYS00ODg4LThkY2UtN2Y0YTM1MjJlMDM0IiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiZmVmZWY0ZWMtNjZkYS00ODg4LThkY2UtN2Y0YTM1MjJlMDM0IiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>📈 Dashboard Análise de Viabilidade :</strong> <p>Avalia a viabilidade financeira de projetos e investimentos, comparando receitas projetadas e custos operacionais para embasar decisões estratégicas.</p>
+            </div>
+            <div class="dashboard-item">
+                <iframe title="Dashboard 2" src="https://app.powerbi.com/view?r=eyJrIjoiODBkNmRjZjUtODViYS00YzIzLWI5NzEtMjk1ZmRkOWRmNjBjIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiODBkNmRjZjUtODViYS00YzIzLWI5NzEtMjk1ZmRkOWRmNjBjIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>🏗 Dashboard Novos Projetos :</strong> <p>Acompanha a evolução de novos empreendimentos, analisando custos, receitas estimadas e viabilidade financeira, garantindo um planejamento eficaz.</p>
+            </div>
+            <div class="dashboard-item">
+                <iframe title="Dashboard 3" src="https://app.powerbi.com/view?r=eyJrIjoiMDdkZDc3NWItNmY3ZC00NmQ0LWE0MmYtYjdjZDRmNGQ3Y2UwIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiMDdkZDc3NWItNmY3ZC00NmQ0LWE0MmYtYjdjZDRmNGQ3Y2UwIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>🏢 Dashboard Engenharia – Cash Flow</strong> <p>Apresenta um fluxo de caixa detalhado para processos de obra, permitindo o controle financeiro e operacional dos projetos em execução.</p>
+            </div>
+            <div class="dashboard-item">
+                <iframe title="Dashboard 4" src="https://app.powerbi.com/view?r=eyJrIjoiZWRjOTI5ZmEtMjFjNy00NjBhLWI5MzctNjc4YzhmN2U1YmIzIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiMDdkZDc3NWItNmY3ZC00NmQ0LWE0MmYtYjdjZDRmNGQ3Y2UwIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>💰 Dashboard Diretoria Financeira – Cash Flow</strong> <p>Fornece uma visão consolidada das finanças da empresa, detalhando receitas, despesas e movimentações bancárias, auxiliando a tomada de decisões estratégicas.</p>
+            </div>
+            <div class="dashboard-item">
+                <iframe title="Dashboard 5" src="https://app.powerbi.com/view?r=eyJrIjoiNTYzMTJiNjktY2EwNC00MGMyLWE1MTAtMWZlZDY4MmE3MDM0IiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiMDdkZDc3NWItNmY3ZC00NmQ0LWE0MmYtYjdjZDRmNGQ3Y2UwIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>📊 Dashboard Diretoria Comercial Vendas</strong> <p>Analisa indicadores de vendas, repasses financeiros, perfil dos clientes e estudo de concorrência, fornecendo suporte para estratégias comerciais e de crescimento.</p>
+            </div>
+            <div class="dashboard-item">
+                <iframe title="Dashboard 6" src="https://app.powerbi.com/view?r=eyJrIjoiZDZlOWIxZWQtNDJjNC00MGFiLWEzZTItZDA2ZmFjZDE4MGE1IiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9" allowfullscreen></iframe>
+                <button class="open-button" onclick="openDashboard('https://app.powerbi.com/view?r=eyJrIjoiMDdkZDc3NWItNmY3ZC00NmQ0LWE0MmYtYjdjZDRmNGQ3Y2UwIiwidCI6IjBiNDNkYmFjLTM5NjgtNDljYS05YWE1LTU0MzA0N2QxMTUxZCJ9')">Abrir</button>
+                <p class="dashboard-description"><strong>🎯 Dashboard Marketing</strong><p>Monitora os investimentos e retornos das campanhas de marketing, analisando a efetividade das ações publicitárias e otimizando a alocação de recursos.</p>
+            </div>
+        </div>
+        <div class="info" id="dashboardInfo">Clique nos dashboards abaixo para visualizar em tela maior.</div>
+    </div>
+            <!-- Botões adicionais -->
+            <button class="button" id="dashboardButton" onclick="window.location.href='index.html'">
+                <i class="fas fa-tachometer-alt"></i> Voltar ao Principal
+            </button>
+            
+
+		</section>
+    <script>
+        function openDashboard(src) {
+            window.open(src, '_blank');
+        }
+
+        function scrollToTop() {
+            smoothScrollTo(0, 0, 1000);
+        }
+
+        function smoothScrollTo(endX, endY, duration) {
+            const startX = window.scrollX || window.pageXOffset;
+            const startY = window.scrollY || window.pageYOffset;
+            const distanceX = endX - startX;
+            const distanceY = endY - startY;
+            const startTime = new Date().getTime();
+
+            duration = typeof duration !== "undefined" ? duration : 400;
+
+            const easeInOutQuart = (time, from, distance, duration) => {
+                if ((time /= duration / 2) < 1) return (distance / 2) * time * time * time * time + from;
+                return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+            };
+
+            const timer = setInterval(() => {
+                const time = new Date().getTime() - startTime;
+                const newX = easeInOutQuart(time, startX, distanceX, duration);
+                const newY = easeInOutQuart(time, startY, distanceY, duration);
+                if (time >= duration) {
+                    clearInterval(timer);
+                }
+                window.scroll(newX, newY);
+            }, 1000 / 60); // 60 fps
+        }
+    </script>
+</body>
+</html>
